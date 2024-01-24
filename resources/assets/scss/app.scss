@@ -1,0 +1,22 @@
+/*
+* standard setting
+*/
+@import "@scss/base/reset.scss";
+@import "@scss/base/base.scss";
+@import "@scss/base/fonts.scss";
+@import "@scss/base/grid.scss";
+/*
+* ui elements
+*/
+@import "@scss/ui/title";
+@import "@scss/ui/btn";
+/*
+* layout elements
+*/
+@import "@scss/layouts/header";
+@import "@scss/layouts/footer";
+/*
+* components
+*/
+@import "@scss/components/welcome";
+@import "@scss/components/honesty";

@@ -1,0 +1,78 @@
+.header {
+  height: 6rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .burger {
+    position: relative;
+    flex-shrink: 0;
+    width: 3.4rem;
+    height: 2rem;
+    transition-duration: $duration;
+    transition-property: background;
+    &:before, &:after, span {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: var(--height-burger-line, 0.3rem);
+      background: $c-white;
+      animation: line-border var(--time-animation, 3s) linear 1s infinite;
+    }
+    &:before, &:after {
+      content: '';
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      display: block;
+      transform: translateY(-50%);
+    }
+    &._active {
+      width: var(--close-burger, 2rem);
+      height: var(--close-burger, 2rem);
+      border-radius: 50%;
+      &:before, &:after {
+        top: 50%;
+        left: 50%;
+        bottom: inherit;
+        width: var(--close-burger, 2rem);
+        transform-origin: center;
+        animation: none;
+      }
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      span {
+        opacity: 0;
+        transform: translateY(0);
+        animation: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .header {
+    height: 8rem;
+    .burger {
+      --close-burger: 3.3rem;
+      --height-burger-line: 0.5rem;
+      width: 5.4rem;
+      height: 3.3rem;
+      &._active {
+        --height-burger-line: 0.4rem;
+      }
+    }
+  }
+}

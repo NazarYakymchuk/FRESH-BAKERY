@@ -1,0 +1,30 @@
+.title {
+  position: relative;
+  width: fit-content;
+  font-family: 'Damn', sans-serif;
+  font-size: 6.6rem;
+  color: $c-yellow;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  &__subtitle {
+    position: absolute;
+    bottom: 1rem;
+    right: -1.3rem;
+    display: block;
+    font-family: $f-family;
+    font-size: 2.5rem;
+    color: $c-green;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media (min-width: $md) {
+  .title {
+    font-size: 13.6rem;
+    &__subtitle {
+      bottom: 2rem;
+      right: -3rem;
+      font-size: 5.2rem;
+    }
+  }
+}

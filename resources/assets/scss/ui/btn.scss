@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  padding: 0 1rem;
+  border-radius: 30rem;
+  border: 1px solid $c-green;
+  background: rgba($c-white, 0.3);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: $md) {
+  .btn {
+    height: 6.2rem;
+    font-size: 2.4rem;
+  }
+}

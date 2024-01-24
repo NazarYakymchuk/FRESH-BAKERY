@@ -1,0 +1,95 @@
+.welcome {
+  --top: 6rem;
+  position: relative;
+  height: 40rem;
+  //overflow: hidden;
+  &__container {
+    height: 100%;
+  }
+  &__title {
+    color: $c-white;
+    font-family: 'Damn', sans-serif;
+    font-size: 9rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+  &__box {
+    position: relative;
+    width: fit-content;
+    padding-top: 8rem;
+    span {
+      display: block;
+    }
+  }
+  &__icon {
+    position: absolute;
+    bottom: -2.5rem;
+    right: 0;
+    width: 20rem;
+    height: 6rem;
+  }
+  &__img {
+    position: absolute;
+    top: calc(var(--top) * -1);
+    left: 0;
+    width: 100%;
+    height: calc(100% + var(--top));
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__bg-wave {
+    position: absolute;
+    bottom: -1rem;
+    width: 100%;
+    height: 15.3rem;
+    overflow: hidden;
+  }
+  &__icon-wave {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 189rem;
+    height: 100%;
+    transform: translateX(-45%);
+  }
+}
+
+@media (min-width: $sm) {
+  .welcome {
+    &__icon-wave {
+      left: 60%;
+      transform: translateX(-60%);
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .welcome {
+    --top: 8rem;
+    height: 89.2rem;
+    &__img {
+      object-fit: cover;
+    }
+    &__title {
+      font-size: 20rem;
+    }
+    &__box {
+      padding-top: 13.5rem;
+    }
+    &__icon {
+      bottom: -7rem;
+      right: -1.7rem;
+      width: 56.7rem;
+      height: 15rem;
+    }
+    &__bg-wave {
+      bottom: -4rem;
+      height: 27.3rem;
+    }
+    &__icon-wave {
+      left: -10%;
+      width: 150%;
+      transform: translateX(0);
+    }
+  }
+}
