@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  //&._with-slider {
+  //  .swiper {
+  //    mask-image: linear-gradient(90deg, transparent, #000 1.5rem, #000 calc(100% - 1.5rem), transparent);
+  //    padding: 0 2rem;
+  //  }
+  //}
+}
+
+@media (min-width: $md) {
+  .container {
+    padding: 0;
+  }
+}

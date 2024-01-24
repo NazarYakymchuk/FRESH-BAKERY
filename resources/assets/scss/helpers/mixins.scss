@@ -1,0 +1,60 @@
+@mixin clipText() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin clipTextHeight($lineHeight, $row) {
+  line-height: $lineHeight;
+  max-height: calc($lineHeight * $row);
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+
+@function breakpoint-min($name) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@mixin media-up($name) {
+  $min: breakpoint-min($name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin scrollbar($thumb, $aria, $track, $width: 5px) {
+  scrollbar-color: $thumb $aria;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar { width: $width; height: 5px; }
+  &::-webkit-scrollbar-thumb { background-color: $thumb; border-radius: 5px }
+  &::-webkit-scrollbar-button { height: 0; width: 0; }
+  &::-webkit-scrollbar-track-piece { background-color: $track }
+}
+
+@mixin generateMaskImage($width, $rotate: 90deg, $color: #000) {
+  mask-image: linear-gradient(
+    $rotate,
+    transparent,
+    #000 #{$width},
+    #000 calc(100% - #{$width}),
+    transparent
+  );
+}
