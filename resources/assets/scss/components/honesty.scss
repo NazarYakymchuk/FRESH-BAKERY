@@ -1,17 +1,32 @@
 .honesty {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  overflow: hidden;
   &._first {
     .honesty {
       &__bg {
-        height: calc(100% + 5.1rem);
+        height: calc(100% + 5.2rem);
         transform: translateY(-5rem);
       }
-      &__box._reverse {
-        .honesty {
-          &__bg {
-            height: calc(100% + 2.1rem);
-            transform: translate(-0.2rem, -1rem);
-          }
+    }
+    ._reverse {
+      .honesty {
+        &__bg {
+          height: calc(100% + 2.1rem);
+          transform: translate(-0.2rem, -1rem);
+        }
+      }
+    }
+  }
+  &._second {
+    .honesty {
+      &__bg {
+        height: 100%;
+      }
+    }
+    ._reverse {
+      .honesty {
+        &__bg {
+          height: 100%;
         }
       }
     }
@@ -19,6 +34,22 @@
   &__btn {
     width: 15.1rem;
     margin-left: auto;
+  }
+  &__play-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.6rem;
+    height: 3.8rem;
+    border: 2px solid $c-white;
+    background: rgba($c-gray-2, 0.3);
+    border-radius: 0.9rem;
+  }
+  &__play-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: $c-white;
   }
   &__inner {
     position: relative;
@@ -31,6 +62,7 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 60%;
+    overflow: hidden;
   }
   &__img, &__bg {
     top: 0;
@@ -45,8 +77,10 @@
     transform: translateX(-50%);
   }
   &__bg {
+    height: 100%;
     width: 100%;
     object-fit: contain;
+    background-repeat: no-repeat;
   }
   &__box {
     margin-bottom: 2.5rem;
@@ -59,24 +93,71 @@
     &._first {
       .honesty {
         &__img-wrapper {
+          width: 73.5rem;
+          height: 70.4rem;
+        }
+        &__img {
           width: 67.7rem;
           height: 48.3rem;
         }
         &__bg {
-          width: 73.5rem;
-          height: 70.4rem;
-          transform: translateY(-25%);
+          height: 100%;
+          transform: translate(-50%, -60%);
         }
       }
-      .honesty__box._reserve {
+      ._reverse {
+        margin-top: -45rem;
         .honesty {
           &__img-wrapper {
+            width: 59.8rem;
+            height: 53.2rem;
+          }
+          &__img {
             width: 51.3rem;
             height: 40.3rem;
           }
           &__bg {
-            width: 53.9rem;
-            height: 46rem;
+            height: 75%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+    &._second {
+      .honesty {
+        &__img-wrapper {
+          width: 62.4rem;
+          height: 64.2rem;
+          transform: rotate(-15deg);
+        }
+        &__img {
+          width: 50.8rem;
+          height: 51.9rem;
+        }
+        &__bg {
+          height: 56%;
+        }
+        &__play-btn {
+          transform: rotate(15deg);
+        }
+      }
+      ._reverse {
+        margin-top: -45rem;
+        .honesty {
+          &__img-wrapper {
+            width: 47.3rem;
+            height: 41.1rem;
+            transform: rotate(-5deg);
+          }
+          &__play-btn {
+            transform: rotate(5deg);
+          }
+          &__img {
+            width: 45.2rem;
+            height: 35.7rem;
+          }
+          &__bg {
+            height: 90%;
           }
         }
       }
@@ -88,7 +169,6 @@
       &._reverse {
         grid-template-columns: 1fr 63.6rem;
         align-items: end;
-        margin-top: -25rem;
         & > * {
           &:nth-child(odd) {
             grid-row: 1;
@@ -102,14 +182,29 @@
         }
       }
     }
+    &__play-btn {
+      width: 10.6rem;
+      height: 5.8rem;
+    }
+    &__play-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
     &__inner {
       margin-bottom: 0;
     }
     &__img-wrapper {
-      padding-bottom: 0;
-    }
-    &__img-wrapper {
       position: relative;
+      padding-bottom: 0;
+      z-index: 1;
+    }
+    &__play-btn {
+      cursor: pointer;
+    }
+    &__img, &__bg {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

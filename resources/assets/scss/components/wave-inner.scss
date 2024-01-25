@@ -1,0 +1,19 @@
+.wave-inner {
+  width: 100%;
+  overflow: hidden;
+  &._reverse {
+    transform: scale(-1, -1);
+  }
+  &__icon {
+    height: var(--height-wave, 15.7rem);
+    width: var(--width-wave, 170.7rem);
+    color: $c-green;
+    transform: translate(-30%, 2rem);
+  }
+}
+
+@media (min-width: $md) {
+  .wave-inner {
+    --width-wave: 150vw;
+  }
+}
