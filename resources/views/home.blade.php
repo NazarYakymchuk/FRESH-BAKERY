@@ -63,11 +63,11 @@
 <x-app>
   <main class="home">
     <x-welcome class="home__welcome" />
-{{--    <x-taste class="home__taste" />--}}
-{{--    <x-honesty class="home__honesty _first" :data="$honestyFirst" />--}}
-{{--    <x-working-conditions name="home__working-conditions" />--}}
-{{--    <x-delivery class="home__delivery" />--}}
-{{--    <x-honesty class="home__honesty _second" :data="$honestySecond" />--}}
-{{--    <x-honesty class="home__honesty _third" :data="$honestyThird" />--}}
+    <x-honesty class="home__honesty _first" :data="$honestyFirst" />
+    <x-taste class="home__taste" />
+    <x-delivery class="home__delivery" />
+    <x-honesty class="home__honesty _second" :data="$honestySecond" />
+    <x-working-conditions name="home__working-conditions" />
+    <x-honesty class="home__honesty _third" :data="$honestyThird" />
   </main>
 </x-app>

@@ -3,25 +3,54 @@
   overflow: hidden;
   &._first {
     .honesty {
+      &__img-wrapper {
+        width: 27rem;
+        height: 21rem;
+        margin: -10% auto 0 auto;
+      }
       &__bg {
-        height: calc(100% + 5.2rem);
-        transform: translateY(-5rem);
+        height: 100%;
       }
     }
     ._reverse {
       .honesty {
-        &__bg {
-          height: calc(100% + 2.1rem);
-          transform: translate(-0.2rem, -1rem);
+        &__img-wrapper {
+          width: 22rem;
+          height: 17rem;
+          margin: -2% auto 0 auto;
         }
       }
     }
   }
   &._second {
+    .honesty {
+      &__img-wrapper {
+        width: 29rem;
+        height: 26rem;
+        margin: -10% auto 0 auto;
+      }
+      &__img {
+        transform: translate(-50%, 5%);
+      }
+      &__play-btn {
+        transform: translateY(70%);
+      }
+    }
     ._reverse {
       .honesty {
+        &__img-wrapper {
+          width: 29rem;
+          height: 26rem;
+          margin: -3% auto 0 auto;
+        }
+        &__img {
+          transform: translate(-50%, 0) scale(1.2);
+        }
         &__bg {
           height: 100%;
+        }
+        &__play-btn {
+          transform: translate(-30%, 0);
         }
       }
     }
@@ -132,13 +161,9 @@
         &__img-wrapper {
           width: 73.5rem;
           height: 70.4rem;
-        }
-        &__img {
-          width: 67.7rem;
-          height: 48.3rem;
+          margin: -18% auto 0 auto;
         }
         &__bg {
-          height: 100%;
           transform: translate(-50%, -60%);
         }
       }
@@ -148,6 +173,7 @@
           &__img-wrapper {
             width: 59.8rem;
             height: 53.2rem;
+            margin: 0% auto 0 auto;
           }
           &__img {
             width: 51.3rem;
@@ -172,10 +198,6 @@
           height: 51.9rem;
           transform: translate(-47%, -46%) rotate(-15deg) scale(1.5);
         }
-        &__play-btn {
-          transform: rotate(15deg);
-          opacity: 0;
-        }
       }
       ._reverse {
         align-items: center;
@@ -187,11 +209,12 @@
             margin-top: -10%;
           }
           &__play-btn {
-            opacity: 0;
+            //opacity: 0;
           }
           &__img {
             width: 45.2rem;
             height: 35.7rem;
+            transform: translate(-50%, -50%) scale(1.2);
           }
           &__bg {
             width: 101%;
