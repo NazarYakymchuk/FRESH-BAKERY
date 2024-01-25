@@ -18,11 +18,6 @@
     }
   }
   &._second {
-    .honesty {
-      &__bg {
-        height: 100%;
-      }
-    }
     ._reverse {
       .honesty {
         &__bg {
@@ -30,6 +25,49 @@
         }
       }
     }
+  }
+  &._third {
+    .honesty {
+      &__img-wrapper {
+        width: 30rem;
+        height: 25rem;
+        margin: 0 auto;
+      }
+      &__img {
+        top: 8%;
+        transform: translateX(-45%) scale(1.2);
+        &._short {
+          top: inherit;
+          bottom: 1%;
+          right: -6%;
+          width: 38%;
+          height: 38%;
+          transform: translate(0, 0) scale(1) rotate(-20deg);
+        }
+      }
+    }
+    ._reverse {
+      .honesty {
+        &__img {
+          top: 6%;
+          transform: translateX(-50%);
+          &._short {
+            top: 1%;
+            left: 9%;
+            right: inherit;
+            bottom: inherit;
+            width: 45%;
+            height: 42%;
+            transform: translate(0, 0) scale(1) rotate(-46deg);
+          }
+        }
+      }
+    }
+  }
+  &__images {
+    position: relative;
+    width: 30rem;
+    height: 25rem;
   }
   &__btn {
     width: 15.1rem;
@@ -61,7 +99,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 60%;
     overflow: hidden;
   }
   &__img, &__bg {
@@ -77,8 +114,8 @@
     transform: translateX(-50%);
   }
   &__bg {
-    height: 100%;
-    width: 100%;
+    height: 101%;
+    width: 101%;
     object-fit: contain;
     background-repeat: no-repeat;
   }
@@ -128,36 +165,63 @@
         &__img-wrapper {
           width: 62.4rem;
           height: 64.2rem;
-          transform: rotate(-15deg);
+          margin-top: -30%;
         }
         &__img {
           width: 50.8rem;
           height: 51.9rem;
-        }
-        &__bg {
-          height: 56%;
+          transform: translate(-47%, -46%) rotate(-15deg) scale(1.5);
         }
         &__play-btn {
           transform: rotate(15deg);
+          opacity: 0;
         }
       }
       ._reverse {
-        margin-top: -45rem;
+        align-items: center;
+        margin-top: -20rem;
         .honesty {
           &__img-wrapper {
             width: 47.3rem;
             height: 41.1rem;
-            transform: rotate(-5deg);
+            margin-top: -10%;
           }
           &__play-btn {
-            transform: rotate(5deg);
+            opacity: 0;
           }
           &__img {
             width: 45.2rem;
             height: 35.7rem;
           }
           &__bg {
-            height: 90%;
+            width: 101%;
+            height: 101%;
+          }
+        }
+      }
+    }
+    &._third {
+      .honesty {
+        &__img-wrapper {
+          width: 70.6rem;
+          height: 70.1rem;
+          margin-top: -30%;
+        }
+        &__img {
+          top: 10%;
+          transform: translateX(-49%) scale(1);
+        }
+        &__title {
+          margin-bottom: 12.1rem;
+        }
+      }
+      ._reverse {
+        align-items: center;
+        margin-top: -10%;
+        .honesty {
+          &__img-wrapper {
+            width: 63rem;
+            height: 68.9rem;
           }
         }
       }
@@ -191,7 +255,9 @@
       height: 3.5rem;
     }
     &__inner {
+      position: relative;
       margin-bottom: 0;
+      z-index: 2;
     }
     &__img-wrapper {
       position: relative;
@@ -205,6 +271,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+    &__title {
+      margin-bottom: 12.3rem;
     }
   }
 }

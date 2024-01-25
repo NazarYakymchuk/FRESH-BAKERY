@@ -2,7 +2,7 @@
 
 <section {{ $attributes->class(['honesty']) }}>
   <div class="honesty__container container">
-    <div class="honesty__title-inner title">
+    <div class="honesty__title title">
       <span class="title__basic">{{ $data['title'] }}</span>
       <span class="title__subtitle">{{ $data['subtitle'] }}</span>
     </div>
@@ -21,9 +21,16 @@
           <div class="honesty__img-wrapper">
             <img
               src="{{ Vite::asset('resources/assets/images/product/'.$item["img"]) }}"
-              alt=""
+              alt="child"
               class="honesty__img"
             >
+            @isset($item['small-img'])
+              <img
+                src="{{ Vite::asset('resources/assets/images/product/'.$item["small-img"]) }}"
+                alt="child"
+                class="honesty__img _short"
+              >
+            @endisset
             <div
               style="background-image: url('{{ Vite::asset('resources/assets/images/product/'.$item["bg"]) }}')"
               class="honesty__bg"

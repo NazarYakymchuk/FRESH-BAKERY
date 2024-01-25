@@ -44,14 +44,18 @@
         [
           'text' => 'Ми віримо, що наші діти - це наші маленькі експерти у смаку та якості. Тому ми приділяємо особливу увагу тому, щоб вони відчували найвищий ступінь впевненості в наших круасанах. Кожен етап виробництва здійснюється з метою дарувати їм той найсмачніший досвід.',
           'button' => true,
-          'img' => 'img-2.png',
-          'bg' => 'img-bg-3.svg'
+          'img' => 'img-4.png',
+          'small-img' => 'img-5.png',
+          'bg' => 'img-bg-5-1.svg',
+          'small-bg' => 'img-bg-6.svg'
         ],
         [
           'text' => 'Замовляйте круасани від “Студії Хліба” та переконайтеся в тому, як ми піклуємося про задоволення наших маленьких гурманів.',
           'button' => true,
-          'img' => 'img-3.png',
-          'bg' => 'img-bg-4.svg'
+          'img' => 'img-6.png',
+          'small-img' => 'img-7.png',
+          'bg' => 'img-bg-7-1.svg',
+          'small-bg' => 'img-bg-8.svg'
         ],
       ]
     ];
@@ -59,11 +63,11 @@
 <x-app>
   <main class="home">
     <x-welcome class="home__welcome" />
-    <x-taste class="home__taste" />
+{{--    <x-taste class="home__taste" />--}}
 {{--    <x-honesty class="home__honesty _first" :data="$honestyFirst" />--}}
 {{--    <x-working-conditions name="home__working-conditions" />--}}
 {{--    <x-delivery class="home__delivery" />--}}
 {{--    <x-honesty class="home__honesty _second" :data="$honestySecond" />--}}
-{{--    <x-honesty-second class="home__honesty _third" :data="$honestySecond" />--}}
+{{--    <x-honesty class="home__honesty _third" :data="$honestyThird" />--}}
   </main>
 </x-app>

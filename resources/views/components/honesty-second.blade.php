@@ -2,7 +2,7 @@
 
 <section {{ $attributes->class(['honesty']) }}>
   <div class="honesty__container container">
-    <div class="honesty__title-inner title">
+    <div class="honesty__title title">
       <span class="title__basic">{{ $data['title'] }}</span>
       <span class="title__subtitle">{{ $data['subtitle'] }}</span>
     </div>
@@ -16,21 +16,16 @@
             <p class="honesty__text">{{ $item['text'] }}</p>
           </div>
           <div class="honesty__img-wrapper">
-{{--            <img--}}
-{{--              src="{{ Vite::asset('resources/assets/images/product/'.$item["img"]) }}"--}}
-{{--              alt=""--}}
-{{--              class="honesty__img"--}}
-{{--            >--}}
-            <video
-              controls
-              preload="true"
-              class="honesty__video"
+            <img
+              src="{{ Vite::asset('resources/assets/images/product/'.$item["img"]) }}"
+              alt=""
+              class="honesty__img"
             >
-              <source
-                src="{{ Vite::asset('resources/assets/images/product/'.$item["video"]) }}"
-                type="video/mp4"
-              />
-            </video>
+            <img
+              src="{{ Vite::asset('resources/assets/images/product/'.$item["small-img"]) }}"
+              alt=""
+              class="honesty__img _short"
+            >
             <div
               style="background-image: url('{{ Vite::asset('resources/assets/images/product/'.$item["bg"]) }}')"
               class="honesty__bg"

@@ -6,6 +6,7 @@
   color: $c-yellow;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+  z-index: 2;
   &__basic._background {
     background-repeat: no-repeat;
     background-position: center;
