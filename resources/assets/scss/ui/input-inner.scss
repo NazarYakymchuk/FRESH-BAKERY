@@ -1,0 +1,29 @@
+.input-inner {
+  display: grid;
+  row-gap: 1rem;
+  font-size: 1.8rem;
+  &__label {
+    text-transform: uppercase;
+  }
+  &__input {
+    height: var(--height-input, 5rem);
+    padding: 0 2.5rem;
+    background: rgba($c-white, 0.2);
+    border: 1px solid $c-green;
+    border-radius: 30rem;
+    font-size: inherit;
+    color: inherit;
+    &::placeholder {
+      font-family: $f-family;
+      color: $c-green;
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .input-inner {
+    --height-input: 8.5rem;
+    row-gap: 2rem;
+    font-size: 2.4rem;
+  }
+}

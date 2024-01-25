@@ -13,6 +13,6 @@
     />
   </div>
   <div class="welcome__bg-wave">
-    <x-ui.svg name="white-wave" class="welcome__icon-wave" />
+    <x-ui.svg name="wave" class="welcome__icon-wave" />
   </div>
 </section>

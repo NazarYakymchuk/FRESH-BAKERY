@@ -1,0 +1,135 @@
+.footer {
+  &__top {
+    position: relative;
+  }
+  &__wrapper {
+    position: relative;
+    background: $c-green;
+    overflow: hidden;
+  }
+  &__bottom {
+    margin-top: -2rem;
+  }
+  &__wave-inner {
+    width: 100%;
+    overflow: hidden;
+    &._top {
+      .footer__wave-top {
+        height: 15.7rem;
+      }
+    }
+    &._bottom {
+      transform: scale(-1, -1);
+      .footer__wave-top {
+        height: 6.7rem;
+      }
+    }
+  }
+  &__wave-top {
+    height: 15.7rem;
+    width: 170.7rem;
+    color: $c-green;
+    transform: translate(-30%, 2rem);
+  }
+  &__title {
+    margin-bottom: 4rem;
+    .title__subtitle {
+      color: $c-white-2;
+    }
+  }
+  &__callback {
+    margin-bottom: 3rem;
+  }
+  &__contacts {
+    margin-bottom: 12rem;
+  }
+  &__img-bg {
+    position: absolute;
+    bottom: -11rem;
+    right: -8rem;
+    width: 35rem;
+    height: 29rem;
+    object-fit: contain;
+  }
+  &__footer-bottom {
+    margin-bottom: 4rem;
+  }
+  &__box {
+    position: relative;
+    display: grid;
+    row-gap: 4rem;
+    padding: 3rem 0;
+    font-family: 'Leto', sans-serif;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -2rem;
+      width: calc(100% + 4rem);
+      height: 1px;
+      background: $c-green;
+    }
+  }
+  &__list {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  &__link-root {
+    font-size: 1.6rem;
+    color: rgba($c-gray, 0.5);
+  }
+  &__root {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: $md) {
+  .footer {
+    &__wrapper {
+      padding-top: 27rem;
+    }
+    &__wave-inner {
+      &._top {
+        .footer__wave-top {
+          height: 27.3rem;
+          transform: translate(-5%, 2rem);
+        }
+      }
+      &._bottom {
+        transform: scale(-1, -1);
+        .footer__wave-top {
+          height: 17.5rem;
+          transform: translate(-20%, 2rem);
+        }
+      }
+    }
+    &__img-bg {
+      bottom: -28%;
+      right: -20%;
+      width: 116.1rem;
+      height: 96.5rem;
+    }
+    &__wave-top {
+      width: 150vw;
+    }
+    &__contacts {
+      margin-bottom: 12.7rem;
+    }
+    &__callback {
+      margin-bottom: 4.2rem;
+    }
+    &__title {
+      margin-bottom: 7rem;
+    }
+    &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.2rem 0 6rem 0;
+      &:before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

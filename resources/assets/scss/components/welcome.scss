@@ -2,7 +2,6 @@
   --top: 6rem;
   position: relative;
   height: 40rem;
-  //overflow: hidden;
   &__container {
     height: 100%;
   }
@@ -51,6 +50,7 @@
     width: 189rem;
     height: 100%;
     transform: translateX(-45%);
+    color: $c-white-2;
   }
 }
 

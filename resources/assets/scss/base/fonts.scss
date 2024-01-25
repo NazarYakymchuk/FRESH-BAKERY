@@ -15,3 +15,12 @@
   src: url('@/assets/fonts/damn/400.woff2') format('woff2'),
   url('@/assets/fonts/damn/400.woff') format('woff')
 }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Leto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@/assets/fonts/leto/400.woff2') format('woff2'),
+  url('@/assets/fonts/leto/400.woff') format('woff')
+}

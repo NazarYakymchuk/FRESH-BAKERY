@@ -1,0 +1,49 @@
+.contacts {
+  --font-size: 4rem;
+  display: grid;
+  row-gap: 1.5rem;
+  color: $c-white;
+  &__item {
+    display: grid;
+  }
+  &__title {
+    font-size: var(--font-size);
+    font-family: 'Damn', sans-serif;
+    color: $c-yellow;
+    text-transform: uppercase;
+  }
+  &__value {
+    margin-top: -1rem;
+    font-size: calc(var(--font-size) - 2rem);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: calc(var(--mr-left, 1rem) * (-1));
+    margin-bottom: -2rem;
+  }
+  &__inner {
+    margin-right: var(--mr-left, 1rem);
+    margin-bottom: 2rem;
+  }
+  &__icon {
+    width: var(--size-icon, 4rem);
+    height: var(--size-icon, 4rem);
+    color: $c-white;
+  }
+}
+
+@media (min-width: $md) {
+  .contacts {
+    --font-size: 6rem;
+    --size-icon: 6.2rem;
+    --mr-left: 3.9rem;
+    &__title {
+
+    }
+    &__value {
+
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.callback {
+  --color: #{$c-white};
+  display: grid;
+  row-gap: 1.5rem;
+  color: $c-white;
+  &__input._last {
+    margin-bottom: 1rem;
+  }
+  &__btn {
+    height: 5rem;
+  }
+}
+
+@media (min-width: $md) {
+  .callback {
+    display: flex;
+    align-items: flex-end;
+    &__input {
+      width: 40.8rem;
+      &._last {
+        margin: 0 4.3rem 0 0;
+      }
+      &:not(._last) {
+        margin-right: 6.1rem;
+      }
+    }
+    &__btn {
+      height: 7.8rem;
+      width: 15.9rem;
+    }
+  }
+}
