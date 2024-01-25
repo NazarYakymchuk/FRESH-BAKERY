@@ -14,14 +14,13 @@
     -webkit-text-fill-color: transparent;
   }
   &__subtitle {
-    position: absolute;
-    bottom: 0;
-    right: -2.8rem;
     display: block;
+    margin-top: -2.5rem;
     font-family: $f-family;
     font-size: 1.6rem;
     color: $c-green;
     letter-spacing: 0.1rem;
+    text-align: right;
   }
 }
 
@@ -29,8 +28,7 @@
   .title {
     font-size: 13.6rem;
     &__subtitle {
-      bottom: 2rem;
-      right: -3rem;
+      margin-top: -8rem;
       font-size: 5.2rem;
     }
   }

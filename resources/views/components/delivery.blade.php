@@ -11,7 +11,8 @@
         'img-3.png',
         'img-4.png',
         'img-5.png',
-        'img-6.png'
+        'img-6.png',
+        'img-3.png',
     ];
 @endphp
 <div {{ $attributes->class(['delivery']) }}>
@@ -36,7 +37,12 @@
   <div class="delivery__box-animation box-animation">
     <div class="box-animation__inner">
       @foreach($products as $img)
-        <img src="{{ Vite::asset('resources/assets/images/delivery/'.$img) }}" />
+        <img src="{{ Vite::asset('resources/assets/images/delivery/'.$img) }}" class="box-animation__img" />
+      @endforeach
+    </div>
+    <div class="box-animation__inner _box">
+      @foreach($products as $img)
+        <img src="{{ Vite::asset('resources/assets/images/delivery/img-box.png') }}" class="box-animation__img" />
       @endforeach
     </div>
   </div>
