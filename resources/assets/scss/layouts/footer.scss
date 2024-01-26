@@ -8,6 +8,7 @@
     overflow: hidden;
   }
   &__bottom {
+    position: relative;
     margin-top: -2rem;
   }
   &__title {
@@ -60,6 +61,23 @@
   &__root {
     font-size: 1.2rem;
     color: rgba($c-green, 0.5);
+  }
+  &__wave-inner.wave-inner._reverse {
+    transform: translateY(-0.1rem) scale(-1, -1);
+  }
+  .circle-inner {
+    position: absolute;
+    top: -14%;
+    left: 0;
+    width: var(--sice-circle-text, 15rem);
+    height: var(--sice-circle-text, 15rem);
+    overflow: hidden;
+    z-index: 3;
+    &__circle-img {
+      position: relative;
+      left: -7rem;
+      animation: circle 18s linear infinite;
+    }
   }
 }
 
@@ -120,6 +138,14 @@
         .wave-inner__icon {
           transform: translate(-20%, 2rem);
         }
+      }
+    }
+    .circle-inner {
+      --sice-circle-text: 22.9rem;
+      top: -30%;
+      left: -13%;
+      &__circle-img {
+        left: 0;
       }
     }
   }

@@ -34,6 +34,9 @@
         </div>
     </div>
     <div class="footer__bottom container">
+        <div class="footer__circle-inner circle-inner">
+            <img src="{{ Vite::asset('resources/assets/images/circle-logo.png') }}" alt="circle-logo" class="circle-inner__circle-img">
+        </div>
         <x-footer-bottom class="footer__footer-bottom" />
         <div class="footer__box">
             <span class="footer__root">{{ $root['text'] }}</span>

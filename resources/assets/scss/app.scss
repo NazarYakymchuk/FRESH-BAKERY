@@ -13,6 +13,7 @@
 @import "@scss/ui/input-inner";
 @import "@scss/ui/slider";
 @import "@scss/ui/modal";
+@import "@scss/ui/animation";
 /*
 * layout elements
 */
@@ -65,4 +66,10 @@
       margin-bottom: 8.3rem;
     }
   }
+}
+
+.circle-text {
+  width: 10rem;
+  height: 10rem;
+  font-family: 'Damn', sans-serif;
 }
