@@ -150,19 +150,24 @@
   animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.micromodal-right[aria-hidden="false"] .modal__container {
-  animation: mmrightIn .3s cubic-bezier(0, 0, .2, 1);
+.micromodal-right[aria-hidden="false"] {
+  .modal__container, .modal__header {
+    animation: mmrightIn .3s cubic-bezier(0, 0, .2, 1);
+  }
 }
 
 .micromodal-right[aria-hidden="true"] .modal__overlay {
   animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.micromodal-right[aria-hidden="true"] .modal__container {
-  animation: mmrightOut .3s cubic-bezier(0, 0, .2, 1);
+.micromodal-right[aria-hidden="true"] {
+  .modal__container, .modal__header {
+    animation: mmrightOut .3s cubic-bezier(0, 0, .2, 1);
+  }
 }
 
 .micromodal-right .modal__container,
+.micromodal-right .modal__header,
 .micromodal-right .modal__overlay {
   will-change: transform;
 }

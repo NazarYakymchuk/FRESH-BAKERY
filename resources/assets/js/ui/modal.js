@@ -23,14 +23,11 @@ import useScreenWidth from "../helpers/useScreenWidth.js";
             modal.getElementsByClassName('modal__container')[0].scrollTop = 0;
           }
 
-          if(modal.id === 'request-call') {
-            burgers.forEach(el => el.classList.add('_active'));
-          }
         },
         onClose: (modal) => {
           showScroll(modal);
           videoBlock();
-          burgerBlock(modal);
+          resetBtnBurger();
         }
       })
     })
@@ -52,13 +49,8 @@ import useScreenWidth from "../helpers/useScreenWidth.js";
     modalBlock.getElementsByClassName('js--video')[0].pause();
   }
 
-  function burgerBlock(modal) {
-    const btn = modal.getElementsByClassName('js--show-languages')[0];
-
-    if(!btn) return;
-
-    modal.getElementsByClassName('js--step-first')[0].classList.remove('_hide');
-    modal.getElementsByClassName('js--step-second')[0].classList.add('_hide');
+  function resetBtnBurger() {
+    burgers.forEach(btn => btn.classList.remove('_active'));
   }
 
   /**
@@ -122,6 +114,7 @@ import useScreenWidth from "../helpers/useScreenWidth.js";
         },
         onClose: (modal) => {
           showScroll(modal);
+          resetBtnBurger();
         }
       });
     }
