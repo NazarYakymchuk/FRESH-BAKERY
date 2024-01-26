@@ -32,3 +32,37 @@
 @import "@scss/components/taste";
 @import "@scss/components/product-info";
 @import "@scss/components/modals/burger";
+
+.home {
+  &__honesty {
+    &._first {
+      margin-bottom: 4.5rem;
+    }
+  }
+  &__delivery {
+    margin-bottom: 5.5rem;
+  }
+}
+
+@media (min-width: $md) {
+  .home {
+    &__honesty {
+      &._first {
+        margin-top: -5rem;
+        margin-bottom: 24.1rem;
+      }
+      &._second {
+        margin-bottom: 13rem;
+      }
+    }
+    &__taste {
+      margin-bottom: 14.7rem;
+    }
+    &__delivery {
+      margin-bottom: 25rem;
+    }
+    &__working-conditions {
+      margin-bottom: 8.3rem;
+    }
+  }
+}

@@ -72,7 +72,7 @@
         ]
     ];
 @endphp
-<div {{ $attributes->class(['taste']) }}>
+<section {{ $attributes->class(['taste']) }}>
   <div class="taste__container container">
     <div class="taste__title title">
       <span class="title__basic">{{ $data['title'] }}</span>
@@ -118,4 +118,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

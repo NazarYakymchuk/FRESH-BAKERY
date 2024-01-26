@@ -1,19 +1,22 @@
 @php
-    $links =  [
-        [
-            'name' => 'Політика конфіденційності',
-            'link' => ''
-        ],
-        [
-            'name' => 'Договір оферти',
-            'link' => ''
+    $root = [
+        'text' => '© 2023, BREADSTUDIA. All rights reserved.',
+        'links' =>  [
+            [
+                'name' => 'Політика конфіденційності',
+                'link' => ''
+            ],
+            [
+                'name' => 'Договір оферти',
+                'link' => ''
+            ]
         ]
     ];
 @endphp
 <footer class="footer">
     <div class="footer__top">
-        <div class="footer__wave-inner _top">
-            <x-ui.svg name="wave-second" class="footer__wave-top" />
+        <div class="footer__wave-inner wave-inner _top">
+            <x-ui.svg name="wave-second" class="wave-inner__icon" />
         </div>
         <div class="footer__wrapper">
             <div class="footer__container container">
@@ -26,16 +29,16 @@
             </div>
             <img src="{{ Vite::asset('resources/assets/images/footer-img.png') }}" alt="footer" class="footer__img-bg" />
         </div>
-        <div class="footer__wave-inner _bottom">
-            <x-ui.svg name="wave-second" class="footer__wave-top" />
+        <div class="footer__wave-inner wave-inner _reverse">
+            <x-ui.svg name="wave-second" class="wave-inner__icon" />
         </div>
     </div>
     <div class="footer__bottom container">
         <x-footer-bottom class="footer__footer-bottom" />
         <div class="footer__box">
-            <span class="footer__root">© 2023, BREADSTUDIA. All rights reserved.</span>
+            <span class="footer__root">{{ $root['text'] }}</span>
             <ul class="footer__list">
-                @foreach($links as $item)
+                @foreach($root['links'] as $item)
                     <li class="footer__item">
                         <a href="{{ $item['link'] }}" class="footer__link-root">
                             {{ $item['name'] }}

@@ -6,7 +6,7 @@
     background: $c-green;
   }
   &__title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     .title {
       &__subtitle {
         right: 2rem;
@@ -63,6 +63,9 @@
         right: -9rem;
       }
     }
+    &__wrapper {
+      padding: 0 0 4rem 0;
+    }
     &__list {
       margin-bottom: 12.7rem;
     }
@@ -87,12 +90,12 @@
     }
     &__wave-inner {
       &.wave-inner {
-        --width-wave: 203.1rem;
         --height-wave: 39.4rem;
+        margin-bottom: -5rem;
       }
       &._reverse {
         --height-wave: 27.7rem;
-
+        margin-bottom: 0;
       }
       .wave-inner__icon {
         transform: translate(-11%, 2.2rem);

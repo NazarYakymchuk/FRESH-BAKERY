@@ -25,7 +25,7 @@
         'img-bg' => 'title-bg.png'
     ];
 @endphp
-<div {{ $attributes->class(['working-conditions']) }}>
+<section {{ $attributes->class(['working-conditions']) }}>
   <div class="working-conditions__wave-inner wave-inner _top">
     <x-ui.svg name="wave-second" class="wave-inner__icon" />
   </div>
@@ -55,4 +55,4 @@
   <div class="working-conditions__wave-inner wave-inner _reverse">
     <x-ui.svg name="wave-second" class="wave-inner__icon" />
   </div>
-</div>
+</section>

@@ -15,7 +15,7 @@
         'img-3.png',
     ];
 @endphp
-<div {{ $attributes->class(['delivery']) }}>
+<section {{ $attributes->class(['delivery']) }}>
   <div class="delivery__wave-inner wave-inner _top">
     <x-ui.svg name="wave-second" class="wave-inner__icon" />
   </div>
@@ -49,4 +49,4 @@
   <div class="delivery__wave-inner wave-inner _reverse">
     <x-ui.svg name="wave-second" class="wave-inner__icon" />
   </div>
-</div>
+</section>

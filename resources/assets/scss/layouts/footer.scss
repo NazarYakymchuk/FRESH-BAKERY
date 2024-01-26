@@ -10,27 +10,6 @@
   &__bottom {
     margin-top: -2rem;
   }
-  &__wave-inner {
-    width: 100%;
-    overflow: hidden;
-    &._top {
-      .footer__wave-top {
-        height: 15.7rem;
-      }
-    }
-    &._bottom {
-      transform: scale(-1, -1);
-      .footer__wave-top {
-        height: 6.7rem;
-      }
-    }
-  }
-  &__wave-top {
-    height: 15.7rem;
-    width: 170.7rem;
-    color: $c-green;
-    transform: translate(-30%, 2rem);
-  }
   &__title {
     margin-bottom: 4rem;
     .title__subtitle {
@@ -80,13 +59,14 @@
   }
   &__root {
     font-size: 1.2rem;
+    color: rgba($c-green, 0.5);
   }
 }
 
 @media (min-width: $md) {
   .footer {
     &__wrapper {
-      padding-top: 27rem;
+      padding-top: 23.7rem;
     }
     &__wave-inner {
       &._top {
@@ -104,13 +84,10 @@
       }
     }
     &__img-bg {
-      bottom: -28%;
-      right: -20%;
+      bottom: -25%;
+      right: -14%;
       width: 116.1rem;
       height: 96.5rem;
-    }
-    &__wave-top {
-      width: 150vw;
     }
     &__contacts {
       margin-bottom: 12.7rem;
@@ -119,16 +96,30 @@
       margin-bottom: 4.2rem;
     }
     &__title {
-      margin-bottom: 7rem;
+      margin-bottom: 10.7rem;
     }
     &__box {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2.2rem 0 6rem 0;
+      padding: 2.2rem 0 3.8rem 0;
       &:before {
         left: 0;
         width: 100%;
+      }
+    }
+    &__wave-inner {
+      &._top {
+        --height-wave: 27.3rem;
+        .wave-inner__icon {
+          transform: translate(-10%, 2rem);
+        }
+      }
+      &._reverse {
+        --height-wave: 17.5rem;
+        .wave-inner__icon {
+          transform: translate(-20%, 2rem);
+        }
       }
     }
   }

@@ -113,6 +113,9 @@
     background: rgba($c-gray-2, 0.3);
     border-radius: 0.9rem;
   }
+  &__title {
+    margin-bottom: 1.5rem;
+  }
   &__play-icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -148,9 +151,6 @@
     object-fit: contain;
     background-repeat: no-repeat;
   }
-  &__box {
-    margin-bottom: 2.5rem;
-  }
 }
 
 @media (min-width: $md) {
@@ -158,6 +158,9 @@
     font-size: 3rem;
     &._first {
       .honesty {
+        &__title {
+          margin-bottom: 5.4rem;
+        }
         &__img-wrapper {
           width: 73.5rem;
           height: 70.4rem;
@@ -187,6 +190,7 @@
       }
     }
     &._second {
+      font-size: 2.6rem;
       .honesty {
         &__img-wrapper {
           width: 62.4rem;
@@ -201,15 +205,12 @@
       }
       ._reverse {
         align-items: center;
-        margin-top: -20rem;
+        margin-top: -13rem;
         .honesty {
           &__img-wrapper {
             width: 47.3rem;
             height: 41.1rem;
             margin-top: -10%;
-          }
-          &__play-btn {
-            //opacity: 0;
           }
           &__img {
             width: 45.2rem;
@@ -224,6 +225,7 @@
       }
     }
     &._third {
+      font-size: 2.6rem;
       .honesty {
         &__img-wrapper {
           width: 70.6rem;
@@ -237,10 +239,13 @@
         &__title {
           margin-bottom: 12.1rem;
         }
+        &__text {
+          margin-bottom: 1.9rem;
+        }
       }
       ._reverse {
         align-items: center;
-        margin-top: -10%;
+        margin-top: -5%;
         .honesty {
           &__img-wrapper {
             width: 63rem;
@@ -252,7 +257,6 @@
     &__box {
       display: grid;
       grid-template-columns: 63.6rem 1fr;
-      margin-bottom: 10rem;
       &._reverse {
         grid-template-columns: 1fr 63.6rem;
         align-items: end;

@@ -46,6 +46,7 @@
     grid-template-columns: 61.9rem 1fr;
     column-gap: 8.7rem;
     align-items: flex-start;
+    margin-bottom: 7.9rem;
     &__title {
       width: fit-content;
       margin-bottom: 0;
@@ -71,6 +72,9 @@
       align-items: flex-start;
       row-gap: 3.2rem;
       column-gap: 6rem;
+    }
+    &__inner._form {
+      margin-bottom: 0;
     }
     &__subtitle {
       margin-bottom: 1rem;
