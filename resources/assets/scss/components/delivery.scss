@@ -43,12 +43,14 @@
       left: 0;
       display: flex;
       align-items: center;
-      transform: translateX(-40%);
+      &:not(._box) {
+        transform: translateX(-40%);
+      }
       &._box {
         top: inherit;
         bottom: 0;
-        left: inherit;
-        right: 0;
+        //left: inherit;
+        //right: 0;
         transform: translateX(40%);
         .box-animation__img {
           height: auto;
@@ -112,11 +114,11 @@
       bottom: 10rem;
       height: 35rem;
       &__inner {
-        transform: translateX(-25%);
         &._box {
+          left: inherit;
+          right: 0;
           display: flex;
           margin-right: -5rem;
-          transform: translateX(40%);
           .box-animation__img {
             width: 13.2rem;
             height: 11.9rem;

@@ -32,5 +32,12 @@
       margin-top: -8rem;
       font-size: 5.2rem;
     }
+    &__basic._background {
+      transition-duration: $duration-long;
+      transition-property: background-position;
+      &:hover {
+        background-position-y: 100%;
+      }
+    }
   }
 }

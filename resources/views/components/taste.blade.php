@@ -80,7 +80,7 @@
     </div>
     <div class="taste__box">
       <p class="taste__text">{{ $data['text'] }}</p>
-      <x-ui.btn class="taste__btn">замовити </x-ui.btn>
+      <x-ui.btn class="taste__btn" hover>замовити </x-ui.btn>
     </div>
     <div class="taste__slider swiper js--taste-slider">
       <div class="taste__wrapper swiper-wrapper">

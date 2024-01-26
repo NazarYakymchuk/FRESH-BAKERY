@@ -1,5 +1,7 @@
 .header {
+  position: relative;
   height: 6rem;
+  z-index: 1;
   &._modals {
     position: relative;
     z-index: 1;

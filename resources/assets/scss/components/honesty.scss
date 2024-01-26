@@ -166,25 +166,21 @@
           height: 70.4rem;
           margin: -18% auto 0 auto;
         }
-        &__bg {
-          transform: translate(-50%, -60%);
+        &__img {
+          object-position: bottom;
         }
       }
       ._reverse {
-        margin-top: -45rem;
+        margin-top: -20rem;
         .honesty {
           &__img-wrapper {
-            width: 59.8rem;
-            height: 53.2rem;
-            margin: 0% auto 0 auto;
+            width: 53.8rem;
+            height: 40.2rem;
+            margin: 5% auto 0 auto;
           }
           &__img {
             width: 51.3rem;
             height: 40.3rem;
-          }
-          &__bg {
-            height: 75%;
-            transform: translate(-50%, -50%);
           }
         }
       }

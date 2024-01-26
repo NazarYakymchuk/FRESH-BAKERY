@@ -1,7 +1,8 @@
 @props([
     "type" => "button",
     "color" => "",
-    "href" => ""
+    "href" => "",
+    "hover" => false
 ])
 
 @if($href)
@@ -10,7 +11,8 @@
     {{
       $attributes->class([
         'btn',
-        '_'.$color => $color
+        '_'.$color => $color,
+        'js--hover-btn' => $hover
       ])
     }}
   >
@@ -22,7 +24,8 @@
     {{
       $attributes->class([
         'btn',
-        '_'.$color => $color
+        '_'.$color => $color,
+        'js--hover-btn' => $hover
       ])
     }}
   >

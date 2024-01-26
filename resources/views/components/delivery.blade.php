@@ -15,7 +15,7 @@
         'img-3.png',
     ];
 @endphp
-<section {{ $attributes->class(['delivery']) }}>
+<section {{ $attributes->class(['delivery js--animation-delivery']) }}>
   <div class="delivery__wave-inner wave-inner _top">
     <x-ui.svg name="wave-second" class="wave-inner__icon" />
   </div>
@@ -35,12 +35,12 @@
     </div>
   </div>
   <div class="delivery__box-animation box-animation">
-    <div class="box-animation__inner">
+    <div class="box-animation__inner js--delivery-img-first">
       @foreach($products as $img)
         <img src="{{ Vite::asset('resources/assets/images/delivery/'.$img) }}" class="box-animation__img" />
       @endforeach
     </div>
-    <div class="box-animation__inner _box">
+    <div class="box-animation__inner _box js--delivery-img-second">
       @foreach($products as $img)
         <img src="{{ Vite::asset('resources/assets/images/delivery/img-box.png') }}" class="box-animation__img" />
       @endforeach

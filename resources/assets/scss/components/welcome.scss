@@ -1,7 +1,9 @@
 .welcome {
   --top: 6rem;
   position: relative;
-  height: 40rem;
+  height: 46rem;
+  margin-top: -6rem;
+  overflow: hidden;
   &__container {
     height: 100%;
   }
@@ -66,7 +68,8 @@
 @media (min-width: $md) {
   .welcome {
     --top: 8rem;
-    height: 89.2rem;
+    height: 97.2rem;
+    margin-top: -8rem;
     &__img {
       object-fit: cover;
     }
