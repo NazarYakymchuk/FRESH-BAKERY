@@ -8,6 +8,7 @@
         [
             'img' => 'bread.png',
             'name' => 'ХЛІБ БЕЗДРІЖОВИЙ',
+            'animation-slug' => 'top',
             'storage' => [
                 'B2',
                 'борошно',
@@ -30,6 +31,7 @@
         [
             'img' => 'baguette.png',
             'name' => 'БАТОН ГРЕЧАНИЙ',
+            'animation-slug' => 'right',
             'storage' => [
                 'ГРЕЧАНЕ БОРОШНО',
                 'ЗАКВАСКА',
@@ -51,6 +53,7 @@
         [
             'img' => 'croissant.png',
             'name' => 'круасан класичний',
+            'animation-slug' => 'bottom',
             'storage' => [
                 'НІЖНИЙ',
                 'БЕЗ ГМО',
@@ -85,7 +88,7 @@
     <div class="taste__slider swiper js--taste-slider">
       <div class="taste__wrapper swiper-wrapper">
         @foreach($product as $item)
-          <div class="taste__slide swiper-slide">
+          <div @class(['taste__slide swiper-slide', '_animation-'.$item['animation-slug']])>
             <div class="taste__tabs taste-tabs js--tabs d-md-none">
               <div class="taste-tabs__inner">
                 <button type="button" class="taste-tabs__btn js--tab-btn _active" data-anchor="first">СКЛАД</button>
