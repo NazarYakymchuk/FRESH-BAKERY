@@ -31,6 +31,7 @@
     @vite('resources/assets/scss/app.scss')
 </head>
 <body>
+<x-ui.modal-inner/>
 <x-header/>
 
 {{ $slot }}

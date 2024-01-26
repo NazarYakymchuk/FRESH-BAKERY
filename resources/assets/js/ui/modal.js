@@ -154,6 +154,7 @@ import useScreenWidth from "../helpers/useScreenWidth.js";
    */
   function hideScroll(modal) {
     blockScroll();
+    handlerScroll(modal);
     initEventBackgroundClick(modal);
 
     if(hasActiveModal() === 0) window.history.replaceState(null, null, `#${modal.id}`);
@@ -161,6 +162,23 @@ import useScreenWidth from "../helpers/useScreenWidth.js";
     modal.style.zIndex = highestZIndex() + 1;
 
     document.querySelectorAll(`[data-modal-trigger="${modal.id}"], [data-modal="${modal.id}"]`).forEach(el => el.classList.add('_active'));
+  }
+
+  function handlerScroll(modal, isActive = true) {
+    const content = modal.getElementsByClassName('modal__container')[0];
+    if(isActive) {
+      content.addEventListener('scroll', watchScroll)
+    } else {
+      content.removeEventListener('scroll', watchScroll)
+    }
+  }
+
+  function watchScroll() {
+    if(this.scrollTop) {
+      this.closest('.modal').classList.add('_scrollable');
+    } else {
+      this.closest('.modal').classList.remove('_scrollable');
+    }
   }
 
   /**
@@ -174,6 +192,8 @@ import useScreenWidth from "../helpers/useScreenWidth.js";
     document.querySelectorAll(`[data-modal-trigger="${modal.id}"], [data-modal="${modal.id}"]`).forEach(el => el.classList.remove('_active'));
 
     initEventBackgroundClick(modal, true);
+
+    handlerScroll(modal, false);
 
     if(!hasActiveModal() || isClosed) {
       history.replaceState(null, null, window.location.href.split('#')[0]);
